@@ -100,17 +100,7 @@ This diagram illustrates how the SGU performs gather and scatter operations usin
 **Duke University**  
 Sep 2025 – Dec 2025  
 
-Designed a **16-bit floating-point ALU** supporting:
-
-- Addition  
-- Subtraction  
-- Multiplication  
-- Division  
-
-Key design features:
-
-- Restoring divider architecture
-- Choosing 4 modes with Mux
+Designed a **16-bit floating-point ALU** supporting: ADD, SUB, MUL, DIV (Restoring Method)
 
 Estimated performance (TSMC 65 nm):
 
