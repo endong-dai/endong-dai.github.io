@@ -37,19 +37,19 @@ Sep 2021 – Jul 2025
 
 # 🔧 Hardware Skills
 
-### RTL / Digital Design
+### Digital Design
 - Verilog
 - FPGA Development (Quartus, Vivado)
-- Digital IC Architecture
-- Finite State Machine Design
+- Digital IC Layout
 - AXI Interface
 
 ### Circuit & Hardware Tools
 - Cadence Virtuoso
 - LTspice
+- Analog Chip Layout
 - PLECS
 - MATLAB / Simulink
-- KiCad PCB Design
+- Altium Designer & KiCad PCB Design
 
 ### Embedded Systems
 - C / C++
@@ -74,14 +74,7 @@ Sep 2021 – Jul 2025
 **Duke University**  
 Sep 2025 – Jan 2026  
 
-Designed a Gather/Scatter Unit for irregular memory access in diffusion AI accelerators.
-
-Key features:
-
-- 4-stage pipelined FSM architecture
-- AXI streaming interface with ready/valid handshake
-- Supports both gather and scatter dataflow
-- Designed in Verilog RTL
+Designed a Gather/Scatter Unit for irregular memory access in diffusion AI accelerators with AXI interface.
 
 ### Gather / Scatter Dataflow
 
