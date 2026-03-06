@@ -38,30 +38,26 @@ Sep 2021 – Jul 2025
 # 🔧 Hardware Skills
 
 ### Digital Design
-- Verilog
-- FPGA Development (Quartus, Vivado)
-- Digital IC Layout
-- AXI Interface
+- Verilog/SystemVerilog
+- ASIC/FPGA Development (Quartus, Vivado)
 
 ### Circuit & Hardware Tools
-- Cadence Virtuoso
+- Cadence Virtuoso (Digital & Analog IC Layout)
+- Altium Designer & KiCad PCB Design
 - LTspice
-- Analog Chip Layout
 - PLECS
 - MATLAB / Simulink
-- Altium Designer & KiCad PCB Design
 
 ### Embedded Systems
 - C / C++
-- PIC16 Assembly
-- STM32
+- MIPS / PIC16 Assembly
 - Arduino
 - Raspberry Pi
+- STM32
 
 ### Platforms
 - Linux (Ubuntu)
 - ROS
-- Git
 
 ---
 
