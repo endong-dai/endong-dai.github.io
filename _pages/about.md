@@ -89,16 +89,9 @@ Key features:
 
 This diagram illustrates how the SGU performs gather and scatter operations using a spatial index list.
 
-### SGU Hardware Architecture
+### SGU Hardware Architecture (4-stage pipeline)
 
 <img src="../images/sgu_pipeline.png" alt="Impact Diagram" width="70%">
-
-The SGU is implemented as a 4-stage pipeline:
-
-- **S0**: Index fetch
-- **S1**: PISO conversion
-- **S2**: Source memory read
-- **S3**: Destination write
 
 ---
 
@@ -116,16 +109,26 @@ Designed a **16-bit floating-point ALU** supporting:
 
 Key design features:
 
-- 12×12-bit array multiplier
 - Restoring divider architecture
-- Exception detection and rounding
-- Normalization datapath and control logic
+- Choosing 4 modes with Mux
 
 Estimated performance (TSMC 65 nm):
 
-- ~1 GHz frequency  
-- <1 ns delay  
-- ~0.05–0.08 mm² area  
+- 16 MHz Maximum Frequency  
+- <18 mW Power Consumption 
+- 0.0083 mm² Divider Core Area
+
+### Divider Core Top-Level Schematic
+
+<img src="../images/divider_schematic.png" alt="Floating point divider top level schematic" width="70%">
+
+Top-level hierarchical schematic of the divider core showing sign processing, exponent logic, and fraction division datapath.
+
+### Divider Core Layout
+
+<img src="../images/divider_layout.png" alt="Divider core standard cell layout" width="70%">
+
+Standard-cell physical layout of the divider core implemented in a digital CMOS flow.
 
 ---
 
