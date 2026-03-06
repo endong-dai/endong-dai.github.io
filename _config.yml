@@ -21,8 +21,8 @@ baidu_site_verification  :
 
 # Site Author
 author:
-  name             : "Endong Dai (戴恩东)"
-  avatar           : "images/profile.jpg"
+  name             : "Endong Dai"
+  avatar           : "images/profile.JPG"
   bio              : "Master's student in Electrical and Computer Engineering at Duke University interested in VLSI Design"
   location         : "Durham, NC, US"
   employer         : "Duke University"
