@@ -6,7 +6,7 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Endong Dai"
+title                    : "Endong Dai (戴恩东)"
 description              : "Master's student in Electrical and Computer Engineering (Hardware)"
 repository               : "endong-dai/endong-dai.github.io"
 google_scholar_stats_use_cdn : true
