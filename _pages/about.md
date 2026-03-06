@@ -74,7 +74,7 @@ Sep 2021 – Jul 2025
 **Duke University**  
 Sep 2025 – Jan 2026  
 
-Designed a Gather/Scatter Unit for irregular memory access in diffusion AI accelerators with AXI interface.
+Designed a Gather/Scatter Unit for irregular memory access in diffusion AI accelerators with **AXI** interface.
 
 ### Gather / Scatter Dataflow
 
@@ -121,12 +121,12 @@ Standard-cell physical layout of the divider core implemented in a digital CMOS 
 Final Year Individual Project  
 Oct 2024 – May 2025  
 
-Designed a high-frequency power conversion system for electric vehicle onboard chargers using wide-bandgap devices.
+Designed a high-frequency power conversion system for **Electric Vehicle Onboard Chargers** using wide-bandgap devices.
 
 Key features:
 
-- Totem-Pole PFC stage for high power factor and low THD
-- CLLC resonant DC–DC converter for high efficiency
+- **Totem-Pole PFC stage** for high power factor and low THD
+- **CLLC resonant DC–DC converter** for high efficiency
 - Dual-loop PI + PR control strategy
 - Efficiency and thermal performance evaluation under multiple load conditions
 
@@ -152,7 +152,7 @@ Two-stage architecture consisting of a Totem-Pole PFC front-end and a CLLC reson
 
 ## Omni-Directional Robot Collision Awareness
 
-**University of Nottingham Ningbo China**  
+**University of Nottingham**  
 Jun 2024 – Aug 2024  
 
 Implemented an autonomous robot navigation system using **ROS and LiDAR-based SLAM**.
