@@ -22,7 +22,7 @@ I am currently interested in:
 
 # 🎓 Education
 
-**Duke University** — Durham, NC  
+**Duke University** — Durham, NC, US
 M.S. Electrical and Computer Engineering (Hardware Track)  
 Aug 2025 – Present  
 
