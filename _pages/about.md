@@ -85,13 +85,13 @@ Key features:
 
 ### Gather / Scatter Dataflow
 
-<img src="https://github.com/endong-dai/endong-dai.github.io/blob/main/images/sgu_dataflow.png" width="85%">
+<img src="/images/sgu_dataflow.png" width="85%">
 
 This diagram illustrates how the SGU performs gather and scatter operations using a spatial index list.
 
 ### SGU Hardware Architecture
 
-<img src="https://github.com/endong-dai/endong-dai.github.io/blob/main/images/sgu_pipeline.png" width="85%">
+<img src="/images/sgu_pipeline.png" width="85%">
 
 The SGU is implemented as a 4-stage pipeline:
 
