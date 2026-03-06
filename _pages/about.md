@@ -10,18 +10,13 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Hi, I am **Endong Dai**, a Master's student in **Electrical and Computer Engineering (Hardware Track)** at **Duke University**.
-
-I focus on **digital hardware design, RTL architecture, and AI accelerator systems**. My goal is to build efficient hardware architectures that bridge **algorithm, digital logic, and system-level integration**.
-
-My experience includes **Verilog RTL design, FPGA systems, embedded development, and circuit simulation**, with projects ranging from **AI chip architecture modules to floating-point ALU design and power electronics systems**.
+I am **Endong Dai**, a Master's student in **Electrical and Computer Engineering (Hardware Track)** at **Duke University**. I focus on **digital hardware design, RTL architecture, and AI accelerator systems**. My goal is to build efficient hardware architectures that bridge **algorithm, digital logic, and system-level integration**. My experience includes **Verilog RTL design, FPGA systems, embedded development, and circuit simulation**, with projects ranging from **AI chip architecture modules to floating-point ALU design and power electronics systems**. You can find more information through my [CV](/files/CV_Endong_Dai.pdf).
 
 I am currently interested in:
 
-- ASIC / VLSI Design  
+- ASIC RTL Design  
 - Hardware Accelerators for AI  
-- FPGA Architecture  
-- RTL System Design  
+- FPGA RTL Design  
 
 ---
 
@@ -31,12 +26,12 @@ I am currently interested in:
 M.S. Electrical and Computer Engineering (Hardware Track)  
 Aug 2025 – Present  
 
-**University of Nottingham** (China + UK 2+2)  
+**University of Nottingham** (China + UK 2+2 Program)  
 B.Eng. Electrical and Electronic Engineering — **First Class Honours**  
 Sep 2021 – Jul 2025  
 
 Awards  
-- Dean’s Scholarship (undergraduate)
+- Dean’s Scholarship  
 
 ---
 
@@ -72,21 +67,45 @@ Awards
 
 # 💻 Selected Projects
 
-## Diffusion AI Chip – Gather/Scatter Unit
-**Duke University**
+---
 
-Designed a **Gather/Scatter Unit (SGU)** for irregular memory access patterns in diffusion model accelerators.
+## Diffusion AI Chip – Gather/Scatter Unit (SGU)
 
-Key contributions:
+**Duke University**  
+Sep 2025 – Jan 2026  
 
-- Implemented a **4-stage pipelined FSM architecture**
-- Designed **AXI streaming interface with ready/valid handshake**
-- Supported **gather and scatter dataflow patterns**
-- Developed the RTL implementation in **Verilog**
+Designed a Gather/Scatter Unit for irregular memory access in diffusion AI accelerators.
+
+Key features:
+
+- 4-stage pipelined FSM architecture
+- AXI streaming interface with ready/valid handshake
+- Supports both gather and scatter dataflow
+- Designed in Verilog RTL
+
+### Gather / Scatter Dataflow
+
+<img src="images/sgu_dataflow.png" width="85%">
+
+This diagram illustrates how the SGU performs gather and scatter operations using a spatial index list.
+
+### SGU Hardware Architecture
+
+<img src="images/sgu_pipeline.png" width="80%">
+
+The SGU is implemented as a 4-stage pipeline:
+
+- **S0**: Index fetch
+- **S1**: PISO conversion
+- **S2**: Source memory read
+- **S3**: Destination write
 
 ---
 
 ## IEEE-754 Half Precision Floating-Point ALU
+
+**Duke University**  
+Sep 2025 – Dec 2025  
 
 Designed a **16-bit floating-point ALU** supporting:
 
@@ -100,7 +119,7 @@ Key design features:
 - 12×12-bit array multiplier
 - Restoring divider architecture
 - Exception detection and rounding
-- Normalization and datapath control
+- Normalization datapath and control logic
 
 Estimated performance (TSMC 65 nm):
 
@@ -112,6 +131,9 @@ Estimated performance (TSMC 65 nm):
 
 ## Omni-Directional Robot Collision Awareness
 
+**University of Nottingham Ningbo China**  
+Jun 2024 – Aug 2024  
+
 Implemented robot navigation system using **ROS and LiDAR SLAM**.
 
 - Configured **ROS Noetic + Gazebo + RViz**
@@ -121,6 +143,9 @@ Implemented robot navigation system using **ROS and LiDAR SLAM**.
 ---
 
 ## Two-Switch Forward DC/DC Converter
+
+**University of Nottingham**  
+Feb 2024 – Apr 2024  
 
 Designed a **two-switch forward converter** power supply system.
 
@@ -132,6 +157,9 @@ Designed a **two-switch forward converter** power supply system.
 
 ## Heart Rate & Pulse Oximeter System
 
+**University of Nottingham**  
+Oct 2023 – Dec 2023  
+
 Embedded biomedical device using **STM32**.
 
 - Designed analog front-end circuits
@@ -142,8 +170,9 @@ Embedded biomedical device using **STM32**.
 
 # 📬 Contact
 
-Email: ed253@duke.edu  
-Personal: daiendong81@gmail.com  
+Email  
+ed253@duke.edu  
+daiendong81@gmail.com  
 
 GitHub  
 https://github.com/endong-dai  
