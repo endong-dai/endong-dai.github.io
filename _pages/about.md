@@ -10,9 +10,9 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am **Endong Dai**, a Master's student in **Electrical and Computer Engineering (Hardware Track)** at **Duke University**. I focus on **digital hardware design, RTL architecture, and AI accelerator systems**. My goal is to build efficient hardware architectures that bridge **algorithm, digital logic, and system-level integration**. My experience includes **Verilog RTL design, FPGA systems, embedded development, and circuit simulation**, with projects ranging from **AI chip architecture modules to floating-point ALU design and power electronics systems**. You can find more information through my [CV](https://github.com/endong-dai/endong-dai.github.io/blob/main/docs/CV.pdf).
+I am **Endong Dai**, a Master's student in **Electrical and Computer Engineering (Hardware Track)** at **Duke University**. I focus on **RTL design, FPGA systems, and digital IC development,** with experience in **Verilog, C/C++, PLECS, and MATLAB simulation** . Strong foundation in power electronics and embedded system, backed by research in AI chip design and floating-point ALU implementation. Passionate about creating efficient, high-performance hardware architectures bridging digital logic and system integration. You can find more information through my [CV](https://github.com/endong-dai/endong-dai.github.io/blob/main/docs/CV.pdf).
 
-I am currently interested in:
+Interested in:
 
 - ASIC RTL Design  
 - Hardware Accelerators for AI  
