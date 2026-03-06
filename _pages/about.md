@@ -30,7 +30,7 @@ Aug 2025 – Present
 B.Eng. Electrical and Electronic Engineering — **First Class Honours**  
 Sep 2021 – Jul 2025  
 
-Awards  
+**Awards**  
 - Dean’s Scholarship  
 
 ---
