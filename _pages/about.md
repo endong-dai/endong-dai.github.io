@@ -85,13 +85,13 @@ Key features:
 
 ### Gather / Scatter Dataflow
 
-<img src="/images/sgu_dataflow.png" width="85%">
+<img src="{{ '/images/sgu_dataflow.png' | relative_url }}" width="85%">
 
 This diagram illustrates how the SGU performs gather and scatter operations using a spatial index list.
 
 ### SGU Hardware Architecture
 
-<img src="/images/sgu_pipeline.png" width="85%">
+<img src="{{ '/images/sgu_pipeline.png' | relative_url }}" width="85%">
 
 The SGU is implemented as a 4-stage pipeline:
 
