@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Endong Dai"
-description              : "Master's student in Electrical and Computer Engineering interested in VLSI Design"
+description              : "Master's student in Electrical and Computer Engineering (Hardware)"
 repository               : "endong-dai/endong-dai.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -25,7 +25,7 @@ author:
   avatar           : "images/profile.JPG"
   bio              : "Duke University"
   location         : "Durham, NC, US"
-  employer         : ""
+  employer         : 
 
   email            : "ed253@duke.edu"
   googlescholar    :
