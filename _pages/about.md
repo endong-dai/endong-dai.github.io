@@ -145,16 +145,38 @@ Implemented robot navigation system using **ROS and LiDAR SLAM**.
 
 ---
 
-## Two-Switch Forward DC/DC Converter
+## High-Frequency Power Electronics Converter
 
 **University of Nottingham**  
-Feb 2024 – Apr 2024  
+Final Year Individual Project  
+Oct 2024 – May 2025  
 
-Designed a **two-switch forward converter** power supply system.
+Designed a high-frequency power conversion system for electric vehicle onboard chargers using wide-bandgap devices.
 
-- Circuit simulation in **PLECS**
-- PCB design using **KiCad**
-- Control verification with **MATLAB**
+Key features:
+
+- Totem-Pole PFC stage for high power factor and low THD
+- CLLC resonant DC–DC converter for high efficiency
+- Dual-loop PI + PR control strategy
+- Efficiency and thermal performance evaluation under multiple load conditions
+
+### System Architecture
+
+<img src="../images/ev_converter_arch.png" alt="EV power converter architecture" width="70%">
+
+Two-stage architecture consisting of a Totem-Pole PFC front-end and a CLLC resonant DC–DC converter.
+
+### Totem-Pole PFC Stage
+
+<img src="../images/pfc_circuit.png" width="70%">
+
+<img src="../images/pfc_controller.png" width="70%">
+
+### CLLC DC-DC Converter Stage
+
+<img src="../images/dcdc_circuit.png" width="70%">
+
+<img src="../images/dcdc_controller.png" width="70%">
 
 ---
 
