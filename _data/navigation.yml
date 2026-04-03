@@ -4,14 +4,14 @@ main:
   - title: "About"
     url: "/#about-me"
 
-  - title: "Projects"
-    url: "/#-selected-projects"
-
   - title: "Education"
     url: "/#-education"
 
   - title: "Skills"
     url: "/#-hardware-skills"
+
+  - title: "Projects"
+    url: "/#-selected-projects"
 
   - title: "Contact"
     url: "/#-contact"
