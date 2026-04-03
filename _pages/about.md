@@ -65,6 +65,30 @@ Sep 2021 – Jul 2025
 
 ---
 
+## Diffusion AI Chip Tape-Out PCB (CPGA Socket Design)
+
+**Duke University**  
+Mar 2026 – Present (v1 completed Apr 2026)
+
+Designed a 6-layer PCB socket system for a **164-pin diffusion AI chip** using a **CPGA-180 package**, enabling high-speed communication with dual USB FX3 boards and external debugging interfaces. Focused on **signal integrity, delay budgeting, and power domain partitioning** across chip-package-board co-design.
+
+### PCB Schematic & Layout
+
+| Schematic | Layout |
+|--------------|------------|
+| <img src="../images/PCB_schematic.png" style="width:100%; height:400px; object-fit: contain;"> | <img src="../images/PCB_layout.png" style="width:100%; height:400px; object-fit: contain;"> |
+
+### Key Contributions
+
+- Designed **CPGA-180 socket mapping and chip-to-board bonding interface** for a 164-pin custom ASIC
+- Implemented **dual 32-bit high-speed interfaces (100 MHz)** to USB FX3 boards with strict timing constraints
+- Achieved **length-matched routing (1800 mil ± 1 mil)** to ensure signal skew minimization
+- Performed **end-to-end delay budgeting**: PCB delay (0.3ns) + USB interface (0.7ns) + Chip Package delay = **2.5 ~ 3 ns system requirement**
+- Partitioned **multiple power domains (VDDIO / VDD_core / VDDHV / VDDPOST)** and designed stable power distribution network
+- Completed **full schematic + BOM (JLCPCB components)** and **6-layer PCB layout** in Altium Designer
+
+---
+
 ## Diffusion AI Chip – Gather/Scatter Unit (SGU)
 
 **Duke University**  
