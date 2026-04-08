@@ -74,13 +74,12 @@ Designed a pipeline delay unit (PDU) for matrix data alignment, enabling row-wis
 
 ### PDU Dataflow
 
-<img src="../images/pdu_data.png" alt="Impact Diagram" width="70%">
+<img src="../images/PDU_data.png" alt="Impact Diagram" width="70%">
 
-This diagram illustrates how the SGU performs gather and scatter operations using a spatial index list.
 
 ### PDU Pipeline
 
-<img src="../images/pdu_pipeline.png" alt="Impact Diagram" width="70%">
+<img src="../images/PDU_pipeline.png" alt="Impact Diagram" width="70%">
 
 ---
 
