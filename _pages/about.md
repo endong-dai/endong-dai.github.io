@@ -65,9 +65,28 @@ Sep 2021 – Jul 2025
 
 ---
 
+## Matrix Skew Unit for Systolic Dataflow (PDU)
+
+**Duke University - Duke Center of Computational Evolutionary Intelligence (CEI)**  
+Sep 2025 – Jan 2026  
+
+Designed a pipeline delay unit (PDU) for matrix data alignment, enabling row-wise skewed dataflow for systolic-style computation.
+
+### PDU Dataflow
+
+<img src="../images/pdu_data.png" alt="Impact Diagram" width="70%">
+
+This diagram illustrates how the SGU performs gather and scatter operations using a spatial index list.
+
+### PDU Pipeline
+
+<img src="../images/pdu_pipeline.png" alt="Impact Diagram" width="70%">
+
+---
+
 ## Diffusion AI Chip Tape-Out PCB (CPGA Socket Design)
 
-**Duke University**  
+**Duke University - CEI**  
 Mar 2026 – Present (v1 completed Apr 2026)
 
 Designed a 6-layer PCB socket system for a **164-pin diffusion AI chip** using a **CPGA-180 package**, enabling high-speed communication with dual USB FX3 boards and external debugging interfaces. Focused on **signal integrity, delay budgeting, and power domain partitioning** across chip-package-board co-design.
@@ -91,7 +110,7 @@ Designed a 6-layer PCB socket system for a **164-pin diffusion AI chip** using a
 
 ## Diffusion AI Chip – Gather/Scatter Unit (SGU)
 
-**Duke University**  
+**Duke University - CEI**  
 Sep 2025 – Jan 2026  
 
 Designed a Gather/Scatter Unit for irregular memory access in diffusion AI accelerators with **AXI** interface.
