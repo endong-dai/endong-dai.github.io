@@ -83,6 +83,25 @@ Designed a pipeline delay unit (PDU) for matrix data alignment, enabling row-wis
 
 ---
 
+## Diffusion AI Chip – Gather/Scatter Unit (SGU)
+
+**Duke University - CEI**  
+Sep 2025 – Jan 2026  
+
+Designed a Gather/Scatter Unit for irregular memory access in diffusion AI accelerators with **AXI** interface.
+
+### Gather / Scatter Dataflow
+
+<img src="../images/sgu_dataflow.png" alt="Impact Diagram" width="70%">
+
+This diagram illustrates how the SGU performs gather and scatter operations using a spatial index list.
+
+### SGU Hardware Architecture (4-stage pipeline)
+
+<img src="../images/sgu_pipeline.png" alt="Impact Diagram" width="70%">
+
+---
+
 ## Diffusion AI Chip Tape-Out PCB (CPGA Socket Design)
 
 **Duke University - CEI**  
@@ -104,25 +123,6 @@ Designed a 6-layer PCB socket system for a **164-pin diffusion AI chip** using a
 - Performed **end-to-end delay budgeting**: PCB delay (0.3ns) + USB interface (0.7ns) + Chip Package delay = **2.5 ~ 3 ns system requirement**
 - Partitioned **multiple power domains (VDDIO / VDD_core / VDDHV / VDDPOST)** and designed stable power distribution network
 - Completed **full schematic + BOM (JLCPCB components)** and **6-layer PCB layout** in Altium Designer
-
----
-
-## Diffusion AI Chip – Gather/Scatter Unit (SGU)
-
-**Duke University - CEI**  
-Sep 2025 – Jan 2026  
-
-Designed a Gather/Scatter Unit for irregular memory access in diffusion AI accelerators with **AXI** interface.
-
-### Gather / Scatter Dataflow
-
-<img src="../images/sgu_dataflow.png" alt="Impact Diagram" width="70%">
-
-This diagram illustrates how the SGU performs gather and scatter operations using a spatial index list.
-
-### SGU Hardware Architecture (4-stage pipeline)
-
-<img src="../images/sgu_pipeline.png" alt="Impact Diagram" width="70%">
 
 ---
 
