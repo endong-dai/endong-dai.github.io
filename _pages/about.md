@@ -223,6 +223,7 @@ Embedded biomedical device using **STM32**.
 
 ---
 
+<span class='anchor' id='game-demo'></span>
 # 🎮 Have Fun(Game Demo)
 
 ## Fire Emblem-Inspired SRPG Demo
