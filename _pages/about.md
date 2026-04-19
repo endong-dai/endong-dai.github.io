@@ -223,7 +223,7 @@ Embedded biomedical device using **STM32**.
 
 ---
 
-# 🎮 [Game / Have Fun](https://endong-dai.github.io/Project_Alpha/)
+# 🎮 Have Fun(Game Demo)
 
 ## Fire Emblem-Inspired SRPG Demo
 
