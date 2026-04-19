@@ -13,6 +13,9 @@ main:
   - title: "Projects"
     url: "/#-selected-projects"
 
+  - title: "Have Fun(Game)"
+    url: "https://endong-dai.github.io/Project_Alpha/"
+
   - title: "Contact"
     url: "/#-contact"
     
