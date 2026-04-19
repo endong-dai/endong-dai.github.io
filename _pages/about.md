@@ -223,6 +223,24 @@ Embedded biomedical device using **STM32**.
 
 ---
 
+# 🎮 [Game / Have Fun](https://endong-dai.github.io/Project_Alpha/)
+
+## Fire Emblem-Inspired SRPG Demo
+
+**Personal Project**  
+Apr 2026 – Present  
+
+Developed a tactical role-playing game prototype in **Python** inspired by Fire Emblem-style grid combat. Implemented unit movement, attack range visualization, combat flow, terrain effects, chapter-based setup, and sprite-based rendering. Refactored the project for browser compatibility and deployed a playable web demo using **pygbag** and **GitHub Pages**.
+
+### Highlights
+
+- Built a grid-based SRPG framework with chapter selection, unit actions, AI turns, and terrain effects
+- Implemented movement/attack range overlays, inventory actions, combat preview, and faction-based rendering
+- Restructured the Python project entry flow for both local execution and browser runtime compatibility
+- Debugged web runtime startup issues and deployed a playable online demo
+
+Demo: [Play Project_Alpha](https://endong-dai.github.io/Project_Alpha/)
+
 # 📬 Contact
 
 Email  
