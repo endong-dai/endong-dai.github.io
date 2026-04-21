@@ -70,7 +70,7 @@ Sep 2021 – Jul 2025
 **Duke University - Duke Center of Computational Evolutionary Intelligence (CEI)**  
 Sep 2025 – Jan 2026  
 
-Designed a pipeline delay unit (PDU) for matrix data alignment, enabling row-wise skewed dataflow for systolic-style computation.
+Designed a phase delay unit (PDU) for matrix data alignment, enabling row-wise skewed dataflow for systolic-style matrix computation.
 
 ### PDU Dataflow
 
