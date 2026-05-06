@@ -153,6 +153,46 @@ Standard-cell physical layout of the divider core implemented in a digital CMOS 
 
 ---
 
+## Multi-Channel FM Receiver with PLL-Based Tuning
+
+**Duke University**  
+Jan 2026 – Apr 2026  
+
+Designed a **multi-channel FM receiver** in **65 nm CMOS** using PLL-based frequency tuning for RF downconversion. The receiver supports FM-band input selection and generates corresponding LO frequencies for a fixed IF architecture.
+
+Key features:
+
+- **RF input band:** 88–108 MHz, with selected input channels at **88 / 96 / 102 / 108 MHz**
+- **LO generation:** 78 / 86 / 92 / 98 MHz for **10 MHz IF** downconversion
+- **PLL reference clock:** 2 MHz
+- **Supply voltage:** 1.2 V
+- **Channel Selection & RF generation layout area:** approximately **0.687 mm²**
+
+### Key Contributions
+
+- Designed and verified the **multi-channel selection path**, including resistor-tree voltage generation and **4-to-1 MUX** channel selection.
+- Implemented the **OTA buffer**, **ring VCO**, and PLL building blocks including **phase detector** and **charge pump** in Cadence Virtuoso.
+
+### Problem & Solution
+
+One major layout challenge was the large area caused by the **rppoly resistor-tree voltage divider**, which significantly increased the top-level layout area. A possible improvement is to replace the large rppoly resistor network with more area-efficient resistor options, such as **metal-to-metal resistor structures** or alternative compact passive implementations, to reduce area while maintaining stable channel-selection voltages.
+
+### Receiver Architecture and Layout
+
+<img src="../images/fm_sch.png" alt="FM receiver top-level schematic" width="70%">
+
+Top-level schematic of the PLL-based multi-channel FM receiver, including channel selection, OTA buffer, VCO, phase detector, and charge pump blocks.
+
+<img src="../images/fm_layout1.png" alt="FM receiver channel selection and RF generation layout" width="70%">
+
+Layout of the channel selection and RF/LO generation section, including the resistor-tree voltage generation, 4-to-1 MUX, OTA buffer, and VCO tuning path.
+
+<img src="../images/fm_layout2.png" alt="PLL phase detector and charge pump layout" width="70%">
+
+Layout of the PLL phase detector and charge pump blocks used for PLL-based frequency tuning.
+
+---
+
 ## High-Frequency Power Electronics Converter
 
 **University of Nottingham**  
