@@ -166,7 +166,7 @@ Key features:
 - **LO generation:** 78 / 86 / 92 / 98 MHz for **10 MHz IF** downconversion
 - **PLL reference clock:** 2 MHz
 - **Supply voltage:** 1.2 V
-- **Channel Selection & RF generation layout area:** approximately **0.687 mm²**
+- **Channel Selection & RF Generation (VCO) layout area:** approximately **0.687 mm²**
 
 ### Key Contributions
 
@@ -179,17 +179,17 @@ One major layout challenge was the large area caused by the **rppoly resistor-tr
 
 ### Receiver Architecture and Layout
 
-<img src="../images/fm_sch.png" alt="FM receiver top-level schematic" width="70%">
-
 Top-level schematic of the PLL-based multi-channel FM receiver, including channel selection, OTA buffer, VCO, phase detector, and charge pump blocks.
 
-<img src="../images/fm_layout1.png" alt="FM receiver channel selection and RF generation layout" width="70%">
+<img src="../images/fm_sch.png" alt="FM receiver top-level schematic" width="70%">
 
 Layout of the channel selection and RF/LO generation section, including the resistor-tree voltage generation, 4-to-1 MUX, OTA buffer, and VCO tuning path.
 
-<img src="../images/fm_layout2.png" alt="PLL phase detector and charge pump layout" width="70%">
+<img src="../images/fm_layout1.png" alt="FM receiver channel selection and RF generation layout" width="70%">
 
 Layout of the PLL phase detector and charge pump blocks used for PLL-based frequency tuning.
+
+<img src="../images/fm_layout2.png" alt="PLL phase detector and charge pump layout" width="70%">
 
 ---
 
