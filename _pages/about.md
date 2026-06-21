@@ -90,7 +90,7 @@ Architected the **Matrix Multiplication Unit (MMU)**, the central **GEMM/GEMV** 
 
 ### Core Idea — Codebook Quantization (GEMV → GEMM)
 
-<img src="../images/MMU_idea.png" alt="MMU codebook quantization idea: recasting memory-bound GEMV as dense GEMM" width="85%">
+<img src="../images/MMU_idea.png" alt="MMU codebook quantization idea: recasting memory-bound GEMV as dense GEMM" width="80%">
 
 - **Original GEMV is memory-bound**: every decode step streams the full weight matrix (e.g. `C=512`, `F=1024`) from memory, so bandwidth — not compute — limits throughput.
 - **Vector quantization**: weight vectors are clustered with **K-means** into a small codebook (`d=8` length vectors, `E=256` entries). Each weight is replaced by an **index (Idx)** into the codebook, drastically shrinking the weight footprint.
@@ -100,7 +100,7 @@ Architected the **Matrix Multiplication Unit (MMU)**, the central **GEMM/GEMV** 
 
 ### Hardware Architecture & Dataflow
 
-<img src="../images/MMU.png" alt="MMU hardware architecture and dataflow block diagram" width="90%">
+<img src="../images/MMU.png" alt="MMU hardware architecture and dataflow block diagram" width="80%">
 
 - **Dual-mode datapath on a shared PE array**, sequenced by the `MMU_CTR` controller:
   - **Prefill (regular mode):** full-precision GEMM — the quantization path is bypassed.
@@ -122,12 +122,12 @@ Designed a phase delay unit (PDU) for matrix data alignment, enabling row-wise s
 
 ### PDU Dataflow
 
-<img src="../images/PDU_data.png" alt="Impact Diagram" width="70%">
+<img src="../images/PDU_data.png" alt="Impact Diagram" width="80%">
 
 
 ### PDU Pipeline
 
-<img src="../images/PDU_pipeline.png" alt="Impact Diagram" width="70%">
+<img src="../images/PDU_pipeline.png" alt="Impact Diagram" width="80%">
 
 ---
 
@@ -140,13 +140,13 @@ Designed a Gather/Scatter Unit for irregular memory access in diffusion AI accel
 
 ### Gather / Scatter Dataflow
 
-<img src="../images/sgu_dataflow.png" alt="Impact Diagram" width="70%">
+<img src="../images/sgu_dataflow.png" alt="Impact Diagram" width="80%">
 
 This diagram illustrates how the SGU performs gather and scatter operations using a spatial index list.
 
 ### SGU Hardware Architecture (4-stage pipeline)
 
-<img src="../images/sgu_pipeline.png" alt="Impact Diagram" width="70%">
+<img src="../images/sgu_pipeline.png" alt="Impact Diagram" width="80%">
 
 ---
 
@@ -159,7 +159,7 @@ Designed a 6-layer PCB socket system for a **164-pin diffusion AI chip** using a
 
 ### PCB Schematic & Layout
 
-<img src="../images/PCB_v2.png" alt="CPGA-180 carrier PCB schematic and layout" width="90%">
+<img src="../images/PCB_v2.png" alt="CPGA-180 carrier PCB schematic and layout" width="80%">
 
 ### Key Contributions
 
@@ -187,13 +187,13 @@ Estimated performance (TSMC 65 nm):
 
 ### Divider Core Top-Level Schematic
 
-<img src="../images/divider_schematic.png" alt="Floating point divider top level schematic" width="70%">
+<img src="../images/divider_schematic.png" alt="Floating point divider top level schematic" width="80%">
 
 Top-level hierarchical schematic of the divider core showing sign processing, exponent logic, and fraction division datapath.
 
 ### Divider Core Layout
 
-<img src="../images/divider_layout.png" alt="Divider core standard cell layout" width="70%">
+<img src="../images/divider_layout.png" alt="Divider core standard cell layout" width="80%">
 
 Standard-cell physical layout of the divider core implemented in a digital CMOS flow.
 
@@ -227,15 +227,15 @@ One major layout challenge was the large area caused by the **rppoly resistor-tr
 
 Top-level schematic of the PLL-based multi-channel FM receiver, including channel selection, OTA buffer, VCO, phase detector, and charge pump blocks.
 
-<img src="../images/fm_sch.png" alt="FM receiver top-level schematic" width="70%">
+<img src="../images/fm_sch.png" alt="FM receiver top-level schematic" width="80%">
 
 Layout of the channel selection and RF/LO generation section, including the resistor-tree voltage generation, 4-to-1 MUX, OTA buffer, and VCO tuning path.
 
-<img src="../images/fm_layout1.png" alt="FM receiver channel selection and RF generation layout" width="70%">
+<img src="../images/fm_layout1.png" alt="FM receiver channel selection and RF generation layout" width="80%">
 
 Layout of the PLL phase detector and charge pump blocks used for PLL-based frequency tuning.
 
-<img src="../images/fm_layout2.png" alt="PLL phase detector and charge pump layout" width="70%">
+<img src="../images/fm_layout2.png" alt="PLL phase detector and charge pump layout" width="80%">
 
 ---
 
@@ -256,21 +256,21 @@ Key features:
 
 ### System Architecture
 
-<img src="../images/ev_converter_arch.png" alt="EV power converter architecture" width="70%">
+<img src="../images/ev_converter_arch.png" alt="EV power converter architecture" width="80%">
 
 Two-stage architecture consisting of a Totem-Pole PFC front-end and a CLLC resonant DC–DC converter.
 
 ### PFC Stage
 
-<img src="../images/pfc_circuit.png" width="70%">
+<img src="../images/pfc_circuit.png" width="80%">
 
-<img src="../images/pfc_controller.png" width="70%">
+<img src="../images/pfc_controller.png" width="80%">
 
 ### DC-DC Converter Stage
 
-<img src="../images/dcdc_circuit.png" width="70%">
+<img src="../images/dcdc_circuit.png" width="80%">
 
-<img src="../images/dcdc_controller.png" width="70%">
+<img src="../images/dcdc_controller.png" width="80%">
 
 ---
 
@@ -290,7 +290,7 @@ Key work:
 
 ### LiDAR Mapping Result (IAMET Building)
 
-<img src="../images/lidar_map.png" alt="LiDAR SLAM mapping result of IAMET building second floor" width="60%">
+<img src="../images/lidar_map.png" alt="LiDAR SLAM mapping result of IAMET building second floor" width="80%">
 
 Final map generated by the Cartographer SLAM algorithm, reconstructing the layout of the second floor of the IAMET building using LiDAR data.
 
