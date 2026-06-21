@@ -35,33 +35,81 @@ Sep 2021 – Jul 2025
 
 ---
 
+# 👨‍🏫 Teaching
+
+## Teaching Assistant — Duke University
+
+**Department of Electrical & Computer Engineering**  
+Summer – Fall 2026  
+
+- Led an **RTL Design Workshop** (Summer 2026), guiding students through Verilog modeling and simulation.
+- Course **TA for ECE 550 — Fundamentals of Computer Systems and Engineering** (Fall 2026): held office hours, graded assignments, and mentored students on RTL design and verification.
+
+---
+
 # 🔧 Hardware Skills
 
-### Digital Design
-- Verilog/SystemVerilog
-- ASIC/FPGA Development (Quartus, Vivado)
+### IC & FPGA Design
+- Verilog / SystemVerilog (RTL Design & Verification)
+- FPGA Prototyping & Bring-Up (Xilinx ZCU102)
+- Vivado, Quartus Prime, ModelSim
+- Cadence Virtuoso (Digital & Analog/Mixed-Signal IC Layout)
 
-### Tools
-- Cadence Virtuoso (Digital & Analog IC Layout)
+### PCB & Simulation
 - Altium Designer & KiCad PCB Design
 - LTspice
 - PLECS
 - MATLAB / Simulink
+- Soldering
 
-### Embedded Systems
+### Programming & Embedded
 - C / C++
-- MIPS / PIC16 Assembly
+- Assembly (PIC16, MIPS)
+- STM32 (STM32CubeIDE)
 - Arduino
 - Raspberry Pi
-- STM32
-
-### Platforms
-- Linux (Ubuntu)
 - ROS
+
+### Tools & Platforms
+- Claude Code
+- Linux (Ubuntu)
+- Git
 
 ---
 
 # 💻 Selected Projects
+
+---
+
+## LLM Accelerator – Matrix Multiplication Unit (MMU)
+
+**Duke University - Duke Center of Computational Evolutionary Intelligence (CEI)**  
+Jan 2026 – Jun 2026  
+
+Architected the **Matrix Multiplication Unit (MMU)**, the central **GEMM/GEMV** engine of an LLM accelerator. The key idea is to use **K-means codebook (vector) quantization** to recast the memory-bound decode **GEMV** into a dense **GEMM**, achieving up to a **10× decode speedup** while keeping a single shared PE array for both prefill and decode.
+
+### Core Idea — Codebook Quantization (GEMV → GEMM)
+
+<img src="../images/MMU_idea.png" alt="MMU codebook quantization idea: recasting memory-bound GEMV as dense GEMM" width="85%">
+
+- **Original GEMV is memory-bound**: every decode step streams the full weight matrix (e.g. `C=512`, `F=1024`) from memory, so bandwidth — not compute — limits throughput.
+- **Vector quantization**: weight vectors are clustered with **K-means** into a small codebook (`d=8` length vectors, `E=256` entries). Each weight is replaced by an **index (Idx)** into the codebook, drastically shrinking the weight footprint.
+- **Reshape to systolic input**: indexed weights are tiled into the systolic array layout (`Row=32`, `Tile_C=32`), turning sparse/irregular lookups into a regular dense tile stream.
+- **Matrix multiply + accumulate**: the codebook entries are matrix-multiplied once and reused across rows, so the heavy compute happens on the small codebook instead of the full weight matrix.
+- **Result**: the effective work drops to `Ratio = F×Col + d×E = 1024×32 + 8×256 ≈ 16×` fewer operations, delivering the ~10× end-to-end decode speedup.
+
+### Hardware Architecture & Dataflow
+
+<img src="../images/MMU.png" alt="MMU hardware architecture and dataflow block diagram" width="90%">
+
+- **Dual-mode datapath on a shared PE array**, sequenced by the `MMU_CTR` controller:
+  - **Prefill (regular mode):** full-precision GEMM — the quantization path is bypassed.
+  - **Decode (quantized mode):** codebook-indexed GEMV computed as dense GEMM for optimized throughput.
+- **Systolic PE array (`MMU_SAU`):** **32×32 PEs for FP16** and **64×64 PEs for INT8**, fed by an **AXI-Stream** ready/valid dataflow for back-pressure–safe streaming.
+- **Front-end staging:** dual `MMU_IBF` input/weight buffers → `TSP` (transpose/skew) → `PDU` (phase delay unit) align operands into the row-skewed format the systolic array expects.
+- **Back-end aggregation (`MMU_AGU`):** `RAM_OC`, `Fp_add`, and `RAM_Psum` accumulate partial sums (Psum), with **SIPO/PISO** converters bridging serial and parallel AXI-Stream widths.
+- **Weight index path:** a dedicated `MMU_IBF` weight-index buffer (actual `BW = 8b × 32 × 16 = 4096b`) supplies codebook indices for the quantized decode mode.
+- **Throughput & verification:** delivers **~1.0 TOPS** (INT8), verified against software golden models and synthesized in a **TSMC 16 nm** flow.
 
 ---
 
@@ -111,9 +159,7 @@ Designed a 6-layer PCB socket system for a **164-pin diffusion AI chip** using a
 
 ### PCB Schematic & Layout
 
-| Schematic | Layout |
-|--------------|------------|
-| <img src="../images/PCB_schematic.png" style="width:100%; height:400px; object-fit: contain;"> | <img src="../images/PCB_layout.png" style="width:100%; height:400px; object-fit: contain;"> |
+<img src="../images/PCB_v2.png" alt="CPGA-180 carrier PCB schematic and layout" width="90%">
 
 ### Key Contributions
 
