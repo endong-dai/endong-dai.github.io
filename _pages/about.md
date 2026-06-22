@@ -113,6 +113,27 @@ Architected the **Matrix Multiplication Unit (MMU)**, the central **GEMM/GEMV** 
 
 ---
 
+## Diffusion Chip – FPGA Validation & Post-Silicon SoC Bring-Up
+
+**Duke University - Duke Center of Computational Evolutionary Intelligence (CEI)**  
+Aug 2025 – Jun 2026  
+
+Drove **backend productization and bring-up** of the diffusion chip (**TSMC 16 nm, CPGA-208**): CPU/NPU, **1 MB GLB SRAM**, GPIO, and **dual 32-bit FX3 interfaces** over a shared **AXI fabric** (INT8 **1.024 TOPS**, FP16 **0.256 TOPS**).
+
+### FPGA Validation & Post-Silicon Bench
+
+| FPGA Pre-Silicon Validation (AMD ZCU102) | Post-Silicon SoC Bring-Up (Taped-Out Chip) |
+|:---:|:---:|
+| <img src="../images/FPGA_Test.jpg" alt="FPGA validation setup on AMD ZCU102" style="width:100%; height:380px; object-fit: contain;"> | <img src="../images/SoC_Test.jpg" alt="Post-silicon SoC bring-up on taped-out chip" style="width:100%; height:380px; object-fit: contain;"> |
+
+### Key Contributions
+
+- Deployed **FPGA-based validation on AMD ZCU102** to verify PC-to-chip communication and control functionality through **FX3, UART, JTAG, and GPIO** interfaces during system bring-up.
+- Performed **post-silicon SoC validation** on the taped-out chip, bringing up **FX3 high-speed TX/RX links** and running **NPU and general-purpose operators** on real silicon against software golden models.
+- Verified the full **AXI fabric** integration across CPU, NPU, **1 MB GLB SRAM**, and dual FX3 channels, achieving **INT8 1.024 TOPS** and **FP16 0.256 TOPS** on hardware.
+
+---
+
 ## Matrix Skew Unit for Systolic Dataflow (PDU)
 
 **Duke University - Duke Center of Computational Evolutionary Intelligence (CEI)**  
