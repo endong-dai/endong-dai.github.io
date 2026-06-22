@@ -134,7 +134,8 @@ Drove **backend productization and bring-up** of the diffusion chip (**TSMC 16 n
 
 ---
 
-## Matrix Skew Unit for Systolic Dataflow (PDU)
+<details markdown="1">
+<summary style="cursor:pointer; font-size:1.5em; font-weight:700; margin:0.5em 0;">Matrix Skew Unit for Systolic Dataflow (PDU) <span style="font-size:0.6em; font-weight:400; color:#888;">▸ click to expand</span></summary>
 
 **Duke University - Duke Center of Computational Evolutionary Intelligence (CEI)**  
 Sep 2025 – Jan 2026  
@@ -150,9 +151,12 @@ Designed a phase delay unit (PDU) for matrix data alignment, enabling row-wise s
 
 <img src="../images/PDU_pipeline.png" alt="Impact Diagram" width="80%">
 
+</details>
+
 ---
 
-## Diffusion AI Chip – Gather/Scatter Unit (SGU)
+<details markdown="1">
+<summary style="cursor:pointer; font-size:1.5em; font-weight:700; margin:0.5em 0;">Diffusion AI Chip – Gather/Scatter Unit (SGU) <span style="font-size:0.6em; font-weight:400; color:#888;">▸ click to expand</span></summary>
 
 **Duke University - CEI**  
 Sep 2025 – Jan 2026  
@@ -168,6 +172,8 @@ This diagram illustrates how the SGU performs gather and scatter operations usin
 ### SGU Hardware Architecture (4-stage pipeline)
 
 <img src="../images/sgu_pipeline.png" alt="Impact Diagram" width="80%">
+
+</details>
 
 ---
 
