@@ -186,15 +186,15 @@ This diagram illustrates how the SGU performs gather and scatter operations usin
 **Duke University - CEI**  
 Mar 2026 – Present (v1 completed Apr 2026)
 
-Designed a 6-layer PCB socket system for a **164-pin diffusion AI chip** using a **CPGA-180 package**, enabling high-speed communication with dual USB FX3 boards and external debugging interfaces. Focused on **signal integrity, delay budgeting, and power domain partitioning** across chip-package-board co-design.
+Designed a 6-layer PCB socket system for a **164-pin diffusion AI chip** using a **CPGA-208 package**, enabling high-speed communication with dual USB FX3 boards and external debugging interfaces. Focused on **signal integrity, delay budgeting, and power domain partitioning** across chip-package-board co-design.
 
 ### PCB Schematic & Layout
 
-<img src="../images/PCB_v2.png" alt="CPGA-180 carrier PCB schematic and layout" width="80%">
+<img src="../images/PCB_v2.png" alt="CPGA-208 carrier PCB schematic and layout" width="80%">
 
 ### Key Contributions
 
-- Designed **CPGA-180 socket mapping and chip-to-board bonding interface** for a 164-pin custom ASIC
+- Designed **CPGA-208 socket mapping and chip-to-board bonding interface** for a 164-pin custom ASIC
 - Implemented **dual 32-bit high-speed interfaces (100 MHz)** to USB FX3 boards with strict timing constraints
 - Achieved **length-matched routing (1800 mil ± 1 mil)** to ensure signal skew minimization
 - Performed **end-to-end delay budgeting**: PCB delay (0.3ns) + USB interface (0.7ns) + Chip Package delay = **2.5 ~ 3 ns system requirement**
