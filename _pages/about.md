@@ -132,7 +132,7 @@ Drove **backend productization and bring-up** of the diffusion chip (**TSMC 16 n
 
 ### Model-to-Silicon Verification Flow
 
-<img src="../images/diffusion_verification_flow.png" alt="Diffusion model-to-silicon verification flow: NN(FP32) to ONNX to PTQ to INT8 to HW-adaption, cross-checked node-by-node across the operator-level C-model golden, the ISA-level C-model, and the hardware/physical run (FX3 server, RISC-V scheduler, RTL)" width="60%">
+<img src="../images/diffusion_verification_flow.png" alt="Diffusion model-to-silicon verification flow: NN(FP32) to ONNX to PTQ to INT8 to HW-adaption, cross-checked node-by-node across the operator-level C-model golden, the ISA-level C-model, and the hardware/physical run (FX3 server, RISC-V scheduler, RTL)" width="50%">
 
 The diffusion NN is quantized (**ONNX → PTQ → INT8**) and hardware-adapted, then verified **node-by-node** across three paths — the **operator-level C-model (software golden)**, the **ISA-level C-model scheduler**, and the **hardware / physical run** (FX3 server + RISC-V scheduler + RTL) — comparing every node tensor to localize any mismatch. This is the flow used to drive the full diffusion UNet — **all 762 hardware-scheduled nodes** — to **bit-exact 0-mismatch** on real silicon.
 
@@ -142,7 +142,6 @@ The diffusion NN is quantized (**ONNX → PTQ → INT8**) and hardware-adapted, 
 - Performed **post-silicon SoC validation** on the taped-out chip, bringing up **FX3 high-speed TX/RX links** and running **NPU and general-purpose operators** on real silicon against software golden models.
 - Brought up the **full diffusion UNet** on real silicon — **all 762 hardware-scheduled nodes** of an 839-node ONNX graph — reaching **bit-exact 0-mismatch** against the scheduler / C-model golden across **41K+ dumped node tensors**.
 - Root-caused and fixed **12 independent bring-up bugs** across firmware operator scheduling, NPU hardware modes, and FX3 USB packet/ACK protocol, advancing the on-chip run from node **n9 → full-model completion (n762)**.
-- Verified the full **AXI fabric** integration across CPU, NPU, **1 MB GLB SRAM**, and dual FX3 channels, achieving **INT8 1.024 TOPS** and **FP16 0.256 TOPS** on hardware.
 
 ---
 
