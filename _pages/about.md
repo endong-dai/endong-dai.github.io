@@ -276,14 +276,14 @@ Layout of the PLL phase detector and charge pump blocks used for PLL-based frequ
 Final Year Individual Project  
 Oct 2024 – May 2025  
 
-Designed a high-frequency power conversion system for **Electric Vehicle Onboard Chargers** using wide-bandgap devices.
+Designed and simulated a two-stage **7.4 kW / ~200 kHz** on-board charger (OBC) for **Electric Vehicles** using **SiC wide-bandgap** devices, modelled in PLECS/MATLAB with per-device thermal models.
 
-Key features:
+Key results:
 
-- **Totem-Pole PFC stage** for high power factor and low THD
-- **CLLC resonant DC–DC converter** for high efficiency
-- Dual-loop PI + PR control strategy
-- Efficiency and thermal performance evaluation under multiple load conditions
+- **Totem-Pole PFC front-end** — power factor up to **0.98 (230 V)** / **0.9951 (110 V)**, efficiency **> 99%** across load (peak **99.13%**), current THD **0.21 (230 V) / 0.09 (110 V)**.
+- **CLLC resonant DC–DC stage** — peak efficiency **99.9%**, holding **≥ 99.75% even at 20% light load**; closed-loop control cut total loss from **93.2 W → 26.6 W**.
+- **Dual-loop PI + PR control** — output-voltage regulation within **±5%** (CLLC output within **±0.05%**) across **20%–100%** load and ±5% line variation.
+- Evaluated **efficiency, loss distribution, and thermal behaviour** per SiC MOSFET/diode to confirm soft-switching and safe junction temperatures.
 
 ### System Architecture
 
