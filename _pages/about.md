@@ -60,8 +60,7 @@ Summer – Fall 2026
 - Cadence Virtuoso (Digital & Analog/Mixed-Signal IC Layout)
 
 ### Verification
-- UVM (constrained-random, functional coverage)
-- Scoreboard / reference-model (C-model) checking
+- UVM
 - AMBA AXI / AXI-Stream
 
 ### PCB & Simulation
@@ -75,6 +74,7 @@ Summer – Fall 2026
 - C / C++
 - Assembly (PIC16, MIPS)
 - STM32 (STM32CubeIDE)
+- Eclipse (Xilinx Vitis)
 - Arduino
 - Raspberry Pi
 - ROS
