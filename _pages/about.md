@@ -56,14 +56,19 @@ Summer – Fall 2026
 ### IC & FPGA Design
 - Verilog / SystemVerilog (RTL Design & Verification)
 - FPGA Prototyping & Bring-Up (Xilinx ZCU102)
-- Vivado, Quartus Prime, ModelSim
+- Vivado, Quartus Prime, Synopsys VCS, Cadence Xcelium
 - Cadence Virtuoso (Digital & Analog/Mixed-Signal IC Layout)
+
+### Verification
+- UVM (constrained-random, functional coverage)
+- Scoreboard / reference-model (C-model) checking
+- AMBA AXI / AXI-Stream
 
 ### PCB & Simulation
 - Altium Designer & KiCad PCB Design
 - LTspice
 - PLECS
-- MATLAB / Simulink
+- MATLAB / Simulink (control-loop design & modeling)
 - Soldering
 
 ### Programming & Embedded
