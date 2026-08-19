@@ -129,11 +129,9 @@ Aug 2025 – Jun 2026
 
 Drove **backend productization and bring-up** of the diffusion chip (**TSMC 16 nm, CPGA-208**): CPU/NPU, **1 MB GLB SRAM**, GPIO, and **dual 32-bit FX3 interfaces** over a shared **AXI fabric** (INT8 **1.024 TOPS**, FP16 **0.256 TOPS**).
 
-### FPGA Validation & Post-Silicon Bench
+### Bring-Up Test Bench
 
-| FPGA Pre-Silicon Validation (AMD ZCU102) | Post-Silicon SoC Bring-Up (Taped-Out Chip) |
-|:---:|:---:|
-| <img src="../images/FPGA_Test.jpg" alt="FPGA validation setup on AMD ZCU102" style="width:100%; height:380px; object-fit: contain;"> | <img src="../images/SoC_Test.jpg" alt="Post-silicon SoC bring-up on taped-out chip" style="width:100%; height:380px; object-fit: contain;"> |
+<img src="../images/bringup_bench.jpg" alt="Chip bring-up test bench: AMD ZCU102 FPGA board, oscilloscope and power supplies, and a custom test PCB carrying the taped-out chip" width="60%">
 
 ### Model-to-Silicon Verification Flow
 
