@@ -26,16 +26,25 @@ Interested in:
 
 # 🎓 Education
 
-**Duke University** — Durham, NC, US
-M.S. Electrical and Computer Engineering (Hardware Track)  
-Aug 2025 – Present  
+**Duke University** — Durham, NC, USA  
+M.S. Electrical and Computer Engineering (Hardware Track) — GPA: 3.8/4.0  
+Aug 2025 – May 2027 (expected)  
+Research: Duke Center for Computational Evolutionary Intelligence (Duke CEI), Advisor: Prof. Yiran Chen  
 
 **University of Nottingham** (China + UK 2+2 Program)  
-B.Eng. Electrical and Electronic Engineering — **First Class Honours**  
+B.Eng. Electrical and Electronic Engineering — **First Class Honours**, GPA: 3.8/4.0  
 Sep 2021 – Jul 2025  
 
 **Awards**  
 - Dean’s Scholarship  
+
+---
+
+# 📄 Publications
+
+1. C. Zhou, …, **E. Dai** (4th author), …, "NPU accelerator for image generation," *IEEE International Solid-State Circuits Conference (ISSCC)*, 2027. **Accepted.**
+2. V. Wang, C. Zhou, **E. Dai**, H. Li, and Y. Chen, "BinSel: Sort-free top-k selection for sparse vision attention from rotated 1-bit keys," *IEEE International Symposium on Circuits and Systems (ISCAS)*, 2027. Under review.
+3. Y. Zhong, C. Zhou, Z. Xu, **E. Dai**, et al., "Training-free spatially selective acceleration for coarse-to-fine 3D generation," *International Conference on Learning Representations (ICLR)*, 2027. Under review (double-blind).
 
 ---
 
@@ -93,7 +102,7 @@ Summer – Fall 2026
 <h2 class="project-title">LLM Accelerator – Matrix Multiplication Unit (MMU)</h2>
 
 **Duke University - Duke Center of Computational Evolutionary Intelligence (CEI)**  
-Jan 2026 – Jun 2026  
+Jan 2026 – Jun 2026 · TSMC 16 nm, 2 mm × 2 mm die (not yet taped out)  
 
 Architected the **Matrix Multiplication Unit (MMU)**, the central **GEMM/GEMV** engine of an LLM accelerator. The key idea is to use **K-means codebook (vector) quantization** to recast the memory-bound decode **GEMV** into a dense **GEMM**, achieving up to a **10× decode speedup** while keeping a single shared PE array for both prefill and decode.
 
@@ -114,20 +123,21 @@ Architected the **Matrix Multiplication Unit (MMU)**, the central **GEMM/GEMV** 
 - **Dual-mode datapath on a shared PE array**, sequenced by the `MMU_CTR` controller:
   - **Prefill (regular mode):** full-precision GEMM — the quantization path is bypassed.
   - **Decode (quantized mode):** codebook-indexed GEMV computed as dense GEMM for optimized throughput.
-- **Systolic PE array (`MMU_SAU`):** **32×32 PEs for FP16** and **64×64 PEs for INT8**, fed by an **AXI-Stream** ready/valid dataflow for back-pressure–safe streaming.
+- **Systolic PE array (`MMU_SAU`):** a shared **32×32 INT4 / 16×16 FP8** PE array, fed by an **AXI-Stream** ready/valid dataflow for back-pressure–safe streaming.
 - **Front-end staging:** dual `MMU_IBF` input/weight buffers → `TSP` (transpose/skew) → `PDU` (phase delay unit) align operands into the row-skewed format the systolic array expects.
 - **Back-end aggregation (`MMU_AGU`):** `RAM_OC`, `Fp_add`, and `RAM_Psum` accumulate partial sums (Psum), with **SIPO/PISO** converters bridging serial and parallel AXI-Stream widths.
 - **Weight index path:** a dedicated `MMU_IBF` weight-index buffer (actual `BW = 8b × 32 × 16 = 4096b`) supplies codebook indices for the quantized decode mode.
-- **Throughput & verification:** delivers **~1.0 TOPS** (INT8), verified against software golden models and synthesized in a **TSMC 16 nm** flow.
+- **Performance & power:** **1.024 TOPS (INT4) / 0.256 TOPS (FP8)** peak at **500 MHz** with **512 KB** on-chip SRAM; estimated SoC power **0.810 W** (MMU **0.345 W**).
+- **Verification:** verified across GEMM and VQ-GEMV modes, INT4/FP8 precisions, ISA parameters, and tile boundaries (**270 test cases**); the MMU stays busy for **~99%** of end-to-end prefill and decode execution time.
 
 ---
 
 <h2 class="project-title">Diffusion Chip – FPGA Validation & Post-Silicon SoC Bring-Up</h2>
 
 **Duke University - Duke Center of Computational Evolutionary Intelligence (CEI)**  
-Aug 2025 – Jun 2026  
+Feb 2026 – Sep 2026 · Taped-out TSMC 16 nm chip (ISSCC 2027)  
 
-Drove **backend productization and bring-up** of the diffusion chip (**TSMC 16 nm, CPGA-208**): CPU/NPU, **1 MB GLB SRAM**, GPIO, and **dual 32-bit FX3 interfaces** over a shared **AXI fabric** (INT8 **1.024 TOPS**, FP16 **0.256 TOPS**).
+Drove **backend productization and bring-up** of the diffusion chip (**TSMC 16 nm, CPGA-208**): CPU/NPU, **1 MB GLB SRAM**, GPIO, and **dual 32-bit FX3 interfaces** over a shared **AXI fabric**.
 
 ### Bring-Up Test Bench
 
